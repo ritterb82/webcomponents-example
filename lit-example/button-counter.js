@@ -21,10 +21,10 @@ export class ButtonCounter extends LitElement {
   }
 
   // let's define some methods
-  _reset(evt) {
+  _reset() {
     this.count = 0;
   }
-  _increment(evt) {
+  _increment() {
     this.count++;
   }
 
