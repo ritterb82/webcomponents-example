@@ -2,31 +2,21 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
+  <script type="module" src="../src/ButtonCounter.js"></script>
   <style>
-    body {
-      background: #fafafa;
+    h1 { font-size: 24px; margin: 0 0 20px; }
+    .demo {
+        width: 500px;
+        margin: 50px auto;
     }
   </style>
 </head>
 <body>
-  <div id="demo"></div>
 
+  <h1>LIT: Button Counter Component</h1>
+    <div class='demo'>
+      <button-counter></button-counter>
+    </div>
 
-
-  <script type="module">
-
-    import { html, render } from 'lit';
-    import '../src/ButtonCounter.js';
-
-    const title = 'Hello owc World!';
-    render(
-      html`
-        <button-counter .title=${title}>
-          some light-dom
-        </button-counter>
-      `,
-      document.querySelector('#demo')
-    );
-  </script>
 </body>
 </html>
