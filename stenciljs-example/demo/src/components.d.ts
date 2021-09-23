@@ -6,32 +6,58 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface BasicContainer {
+    }
     interface ButtonCounter {
+    }
+    interface MyButton {
     }
 }
 declare global {
+    interface HTMLBasicContainerElement extends Components.BasicContainer, HTMLStencilElement {
+    }
+    var HTMLBasicContainerElement: {
+        prototype: HTMLBasicContainerElement;
+        new (): HTMLBasicContainerElement;
+    };
     interface HTMLButtonCounterElement extends Components.ButtonCounter, HTMLStencilElement {
     }
     var HTMLButtonCounterElement: {
         prototype: HTMLButtonCounterElement;
         new (): HTMLButtonCounterElement;
     };
+    interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {
+    }
+    var HTMLMyButtonElement: {
+        prototype: HTMLMyButtonElement;
+        new (): HTMLMyButtonElement;
+    };
     interface HTMLElementTagNameMap {
+        "basic-container": HTMLBasicContainerElement;
         "button-counter": HTMLButtonCounterElement;
+        "my-button": HTMLMyButtonElement;
     }
 }
 declare namespace LocalJSX {
+    interface BasicContainer {
+    }
     interface ButtonCounter {
     }
+    interface MyButton {
+    }
     interface IntrinsicElements {
+        "basic-container": BasicContainer;
         "button-counter": ButtonCounter;
+        "my-button": MyButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "basic-container": LocalJSX.BasicContainer & JSXBase.HTMLAttributes<HTMLBasicContainerElement>;
             "button-counter": LocalJSX.ButtonCounter & JSXBase.HTMLAttributes<HTMLButtonCounterElement>;
+            "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
         }
     }
 }

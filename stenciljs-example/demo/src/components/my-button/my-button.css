@@ -1,0 +1,25 @@
+button {
+  display: inline-block;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+button.small {
+  padding: 8px;
+  font-size: 12px;
+}
+
+button.medium {
+  padding: 16px;
+  font-size: 18px;
+}
+
+button.large {
+  padding: 32px;
+  font-size: 24px;
+}
