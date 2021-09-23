@@ -11,6 +11,7 @@ export namespace Components {
     interface ButtonCounter {
     }
     interface MyButton {
+        "size": string;
     }
 }
 declare global {
@@ -44,6 +45,7 @@ declare namespace LocalJSX {
     interface ButtonCounter {
     }
     interface MyButton {
+        "size"?: string;
     }
     interface IntrinsicElements {
         "basic-container": BasicContainer;

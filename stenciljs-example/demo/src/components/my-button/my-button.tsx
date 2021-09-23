@@ -1,21 +1,21 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'my-button',
   styleUrl: 'my-button.css',
   shadow: true,
 })
+
 export class MyButton {
+  // we'll add a property
+  @Prop() size : string = 's';
 
-  //<button class="${this.size === 's' ? 'small' : (this.size === 'm' ? 'medium' : 'large')}" type="button"><slot></slot></button>
-
-
+  // the render method
   render() {
     return (
-      <Host>
+      <button type="button" class={this.size === 's' ? 'small' : (this.size === 'm' ? 'medium' : 'large')}>
         <slot></slot>
-      </Host>
+      </button>
     );
   }
-
 }
