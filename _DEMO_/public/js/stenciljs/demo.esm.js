@@ -1,0 +1,1 @@
+import{p as t,b as n}from"./p-35d48f08.js";(()=>{const n=import.meta.url,o={};return""!==n&&(o.resourcesUrl=new URL(".",n).href),t(o)})().then((t=>n([["p-af54c7ac",[[1,"basic-container"],[1,"button-counter",{count:[32]}],[1,"my-button",{size:[1]}]]]],t)));

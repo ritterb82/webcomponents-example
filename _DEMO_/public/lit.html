@@ -4,20 +4,57 @@
   <meta charset="utf-8">
   <script type="module" src="./js/lit/button-counter.js"></script>
   <style>
-    h1 { font-size: 24px; margin: 0 0 20px; }
+    h1 { font-size: 24px; margin: 20px 0 0; }
     .demo {
         width: 500px;
         margin: 50px 0;
     }
+    .sample1 {
+      font-size: 24px;
+    }
   </style>
+  <script>
+    function myOnClick(evt) {
+      switch(evt.target.size) {
+        case 's':
+          evt.target.size = 'm';
+          break;
+        case 'm':
+          evt.target.size = 'l';
+          break;
+        default:
+          evt.target.size = 's';
+      }
+    }
+  </script>
 </head>
 <body>
 
   <h1>LIT: Button Counter Component</h1>
   <div class='demo'>
     <button-counter></button-counter>
+    <br /><button type="button">Other Button Not Styled!</button>
   </div>
-  <button type="button">Other Button Not Styled!</button>
+
+  <h1>LIT: Basic Container</h1>
+  <div class='demo'>
+    <basic-container>
+      <p class="sample1">This is my content</p>
+      <p class="sample1">This is my content</p>
+      <p class="sample1">This is my content</p>
+      <p class="sample1">This is my content</p>
+    </basic-container>
+  </div>
+
+  <h1>LIT: My Button</h1>
+  <div class='demo'>
+    <my-button>small</my-button>
+    <my-button size="m">medium</my-button>
+    <my-button size="l">large</my-button>
+    <br /><br />
+    <my-button onclick="myOnClick(event)" size="l">Click and Toggle Me</my-button>
+  </div>
+
 
 </body>
 </html>
